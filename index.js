@@ -44,7 +44,8 @@ createGrid(prompt('Provide grid size max(64x64)'))
  }
  
  function selectCells (){
-    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('mouseover', addColor))
+    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('mouseover', addColor));
+    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('touchmove', addColor));
  }
  
   
