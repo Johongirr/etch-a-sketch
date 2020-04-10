@@ -7,23 +7,31 @@
  let size = Math.floor((container.offsetWidth/gridSize));
    
       for(let i = 0; i < gridSize; i++){
-          let row = document.createElement('div');
-          row.style = `display: grid; grid-template-columns: repeat(${gridSize}, ${size}px);
-                       grid-auto-rows: ${size}px`
+          let gridContainer = creteGridContainer(gridSize, size)
           for(let j = 0; j < gridSize; j++){
-              let cell = document.createElement('div');
-              cell.classList.add('cell')
+              let gridItem = createGridItem(size);
              
              
-              row.appendChild(cell)
+              gridContainer.appendChild(gridItem)
           }
-          container.appendChild(row);
+          container.appendChild(gridContainer);
       }
  }
  
   
 createGrid(prompt('Provide grid size max(64x64)'))
  
+ function creteGridContainer(gridSize, size){
+    let row = document.createElement('div');
+    row.style = `display: grid; grid-template-columns: repeat(${gridSize}, ${size}px);
+                 grid-auto-rows: ${size}px`
+    return row;
+ }
+ function createGridItem(size){
+    let cell = document.createElement('div');
+    cell.classList.add('cell');
+    return cell;
+ }
  function addColor(){
      this.style.backgroundColor = `#000`;   
  }
