@@ -35,7 +35,11 @@ createGrid(prompt('Provide grid size max(64x64)'))
  }
 
  function errorHandling(gridSize) {
-    while(gr)
+   let grid = gridSize;
+   while(grid < 1 || isNaN(grid)){
+      grid = prompt('Provide grid size max(64x64)');
+   }
+   return grid;
  }
  function addColor(){
      this.style.backgroundColor = `#000`;   
