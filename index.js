@@ -4,11 +4,12 @@
  
 
  function createGrid(gridSize){
- let size = Math.floor((container.offsetWidth/gridSize));
+   let gridAmount =  errorHandling(gridSize)
+ let size = Math.floor((container.offsetWidth/gridAmount));
    
-      for(let i = 0; i < gridSize; i++){
-          let gridContainer = creteGridContainer(gridSize, size)
-          for(let j = 0; j < gridSize; j++){
+      for(let i = 0; i < gridAmount; i++){
+          let gridContainer = creteGridContainer(gridAmount, size)
+          for(let j = 0; j < gridAmount; j++){
               let gridItem = createGridItem(size);
              
              
@@ -32,6 +33,10 @@ createGrid(prompt('Provide grid size max(64x64)'))
     cell.classList.add('cell');
     return cell;
  }
+
+ function errorHandling(gridSize) {
+    while(gr)
+ }
  function addColor(){
      this.style.backgroundColor = `#000`;   
  }
@@ -53,7 +58,9 @@ createGrid(prompt('Provide grid size max(64x64)'))
  
  function selectCells (){
     document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('mouseover', addColor));
+    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('touchstart', addColor));
     document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('touchmove', addColor));
+   
  }
  
   
@@ -63,3 +70,4 @@ createGrid(prompt('Provide grid size max(64x64)'))
  selectCells()
  clearGrid.addEventListener('click', resizeGrid)
  randomColor.addEventListener('click',generateRandomColor)
+  
