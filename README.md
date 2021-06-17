@@ -3,7 +3,7 @@
 
 ### Tools used 
 HTML5 \
-CSS3 FlEXBOX \
+CSS3 GRID \
 JAVASCRIPT 
 
 
@@ -14,8 +14,7 @@ JAVASCRIPT
 ### Author
 :man: Johongir 
 * Github [Johongir](https://github.com/Johongirr)
-* CodeWars [Johongir](https://www.codewars.com/users/Johongirmdmdmd?refreshed=true)
-
+ 
 
 ### Contributing
 Contributions, issues and feature requests are welcome!
